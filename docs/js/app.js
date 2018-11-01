@@ -23,3 +23,10 @@ function getQuote(){
 }
 
 getQuote();
+
+$('#tweet-quote').on('click', function(e){
+  e.preventDefault();
+  let quote = $('#text').text() + ' - ' + $('#author').text();
+  let url = 'https://twitter.com/intent/tweet?text=' + quote;
+  window.open(url, '_blank');
+});
