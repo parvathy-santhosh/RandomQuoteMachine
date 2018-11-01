@@ -8,7 +8,7 @@ $('#new-quote').on('click', function(e) {
 function getQuote(){
   var quoteRequestTimeOut = setTimeout(function(){
             $('#text').text('... failed to load.');
-            $('#author').html('<br/>');
+            $('#author').html('Please check internet connectivity');
   }, 8000);
   $.ajax( {
     url: 'https://talaikis.com/api/quotes/random/',
@@ -21,3 +21,5 @@ function getQuote(){
     cache: false
   });
 }
+
+getQuote();
